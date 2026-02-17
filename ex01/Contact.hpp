@@ -1,6 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <iomanip>
+
+#define MAGENTA "\033[35m"
+#define RED "\033[31m"
+#define RESET    "\033[0m"
 
 class Contact
 {
@@ -22,5 +27,4 @@ class Contact
 	std::string getPhonenumber(void) const;
 	std::string getDarkestsecret(void) const;
 	void add();
-	void ShowContact();
 };

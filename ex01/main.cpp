@@ -4,28 +4,42 @@
 
 int	main(void)
 {
-	PhoneBook phonebook;
-	Contact Contact;
+	PhoneBook	phonebook;
+	Contact		Contact;
+	int			num;
+	int			index;
+
 	std::string tmp;
-	int	index = 0;
+	index = 1;
 	while (1)
 	{
-		if (std::cin.eof())
-			break;
 		getline(std::cin, tmp);
+		if (std::cin.eof())
+			break ;
 		if (tmp == "exit")
 			break ;
-		if (tmp == "add")
+		else if (tmp == "add")
 		{
+			if (index == 9)
+				index = 1;
 			phonebook.getContact(index);
 			index++;
-			if (index == 8)
-				index = 0;
 		}
-		if (tmp == "search")
+		else if (tmp == "search")
 		{
 			phonebook.ShowContact();
+			getline(std::cin, tmp);
+			if (std::cin.eof())
+				break ;
+			if (tmp.size() == 1 && std::isdigit(static_cast<unsigned char>(tmp[0])))
+				num = std::atoi(tmp.c_str());
+			if (num >= 1 && num <= 8)
+				phonebook.PrintContact(tmp);
+			else if (num < 1 || num > 8)
+				std::cout << RED << "this contact index is out of range\n" << RESET;
 		}
+		else
+			std::cout << RED << "WRONG INSTRUCTION\n" << RESET;
 	}
 	return (0);
 }

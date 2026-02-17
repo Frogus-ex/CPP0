@@ -9,8 +9,9 @@ int	main(int ac, char **av)
 	for(int i = 1 ; i < ac ; i++)
 	{
 		tmp = av[i];
-		for(int y = 0 ; y < tmp.size() ; y++)
+		for(unsigned long y = 0 ; y < tmp.size() ; y++)
 			std::cout << (char)toupper(tmp[y]);
 	}
+	std::cout << "\n";
 	return 0;
 }
