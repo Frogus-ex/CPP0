@@ -28,7 +28,6 @@ std::string PhoneBook::formatColumn(const std::string &str) const
 		result += '.';
 	}
 	return (result);
-	// return (std::string(10 - result.length(), ' ') + result);
 }
 
 void PhoneBook::ShowContact()
@@ -66,11 +65,11 @@ void PhoneBook::PrintContact(std::string tmp)
 			std::cout << "this contact is empty\n";
 			return ;
 		}
-		std::cout << tmp
-		<< "\n" << _contacts[input - 1].getFirstname()
-		<< "\n" << _contacts[input - 1].getLastname()
-		<< "\n" << _contacts[input - 1].getNickname()
-		<< "\n" << _contacts[input - 1].getPhonenumber()
-		<< "\n" << _contacts[input - 1].getDarkestsecret() << "\n";
+		std::cout << "index: " << tmp
+		<< "\n" << "Firstname: " << _contacts[input - 1].getFirstname()
+		<< "\n" << "Lastname: " << _contacts[input - 1].getLastname()
+		<< "\n" << "Nickname: " << _contacts[input - 1].getNickname()
+		<< "\n" << "Phonenumber: " << _contacts[input - 1].getPhonenumber()
+		<< "\n" << "DarkestSecret " << _contacts[input - 1].getDarkestsecret() << "\n";
 	}
 }
