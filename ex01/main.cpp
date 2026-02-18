@@ -16,16 +16,16 @@ int	main(void)
 		getline(std::cin, tmp);
 		if (std::cin.eof())
 			break ;
-		if (tmp == "exit")
+		if (tmp == "EXIT")
 			break ;
-		else if (tmp == "add")
+		else if (tmp == "ADD")
 		{
 			if (index == 9)
 				index = 1;
 			phonebook.getContact(index);
 			index++;
 		}
-		else if (tmp == "search")
+		else if (tmp == "SEARCH")
 		{
 			phonebook.ShowContact();
 			getline(std::cin, tmp);

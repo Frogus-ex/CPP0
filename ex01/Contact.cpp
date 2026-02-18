@@ -41,7 +41,7 @@ void Contact::add()
 		return ;
 	if (Contact::_firstname.empty())
 	{
-		std::cout << "Firstname cannot be an empty field\n";
+		std::cout << RED << "Firstname cannot be an empty field\n" << RESET;
 		goto back;
 	}
 	std::cout << "Enter Lastname\n";
@@ -50,7 +50,7 @@ void Contact::add()
 		return ;
 	if (Contact::_lastname.empty())
 	{
-		std::cout << "Lastname cannot be an empty field\n";
+		std::cout << RED << "Lastname cannot be an empty field\n" << RESET;
 		goto back;
 	}
 	std::cout << "Enter Nickname\n";
@@ -59,7 +59,7 @@ void Contact::add()
 		return ;
 	if (Contact::_nickname.empty())
 	{
-		std::cout << "Nickname cannot be an empty field\n";
+		std::cout << RED << "Nickname cannot be an empty field\n" << RESET;
 		goto back;
 	}
 	std::cout << "Enter Phonenumber\n";
@@ -68,7 +68,7 @@ void Contact::add()
 		return ;
 	if (Contact::_phonenumber.empty())
 	{
-		std::cout << "Phonenumber cannot be an empty field\n";
+		std::cout << RED << "Phonenumber cannot be an empty field\n" << RESET;
 		goto back;
 	}
 	std::cout << "Enter DarkestSecret\n";
@@ -77,8 +77,8 @@ void Contact::add()
 		return ;
 	if (Contact::_darkestsecret.empty())
 	{
-		std::cout << "DarkestSecret cannot be an empty field\n";
+		std::cout << RED << "DarkestSecret cannot be an empty field\n" << RESET;
 		goto back;
 	}
-	std::cout << "your new contact as been successfully added\n";
+	std::cout << GREEN << "your new contact as been successfully added\n" << RESET;
 }
